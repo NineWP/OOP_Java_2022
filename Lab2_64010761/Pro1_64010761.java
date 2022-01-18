@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Lab2_Pro1_64010761 {
+public class Pro1_64010761 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter today's day : ");

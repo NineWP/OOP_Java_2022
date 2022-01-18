@@ -6,18 +6,19 @@ public class Lab2_Pro3_64010761 {
 
         System.out.print("Enter year: (e.g., 2012) : ");
         int year = sc.nextInt();
-        int j = year / 100;
-        int k = year % 100;
         
         System.out.print("Enter month: 1-12: ");
         int m = sc.nextInt();
         if(m < 3){
             m += 12;
+            year -= 1;
         }
 
         System.out.print("Enter the day of the month: 1-31: ");
         int q = sc.nextInt();
 
+        int j = year / 100;
+        int k = year % 100;
 
         int h = (q + (26*(m+1))/10 + k/4 + j/4 + 5*j + k ) % 7;
 

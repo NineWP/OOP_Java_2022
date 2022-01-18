@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Lab2_Pro4_64010761 {
+public class Pro4_64010761 {
     public static void main(String[] args) {
         String [] name = new String[3];
         String temp;
