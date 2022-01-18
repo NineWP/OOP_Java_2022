@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Lab2_Pro2_64010761 {
+public class Pro2_64010761 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("scissor (0), rock (1), paper (2) : ");
