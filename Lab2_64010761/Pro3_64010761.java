@@ -6,9 +6,17 @@ public class Pro3_64010761 {
 
         System.out.print("Enter year: (e.g., 2012) : ");
         int year = sc.nextInt();
+        while(year < 0){
+            System.out.print("ERROR try again : ");
+            year = sc.nextInt();
+        }
         
         System.out.print("Enter month: 1-12: ");
         int m = sc.nextInt();
+        while(m < 1 || m > 12){
+            System.out.print("ERROR try again : ");
+            m = sc.nextInt();
+        }
         if(m < 3){
             m += 12;
             year -= 1;
@@ -16,6 +24,11 @@ public class Pro3_64010761 {
 
         System.out.print("Enter the day of the month: 1-31: ");
         int q = sc.nextInt();
+
+        while(q < 1 || q > 31 || (q > 30 && (m == 1 || m == 3 || m == 5 || m == 7 || m == 8 || m == 10 || m == 12) ) || (q > 29 && m == 2)){
+            System.out.print("ERROR try again : ");
+            q = sc.nextInt();
+        }
 
         int j = year / 100;
         int k = year % 100;

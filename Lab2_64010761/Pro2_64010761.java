@@ -5,6 +5,10 @@ public class Pro2_64010761 {
         Scanner sc = new Scanner(System.in);
         System.out.print("scissor (0), rock (1), paper (2) : ");
         int num = sc.nextInt();
+        while(num < 0 || num > 2){
+            System.out.print("Error try again : ");
+            num = sc.nextInt();
+        }
         int random = (int)Math.random()*3;
         String result;
 
