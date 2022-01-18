@@ -5,6 +5,10 @@ public class Pro5_64010761 {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter the number of line : ");
         int n = sc.nextInt();
+        while(n < 1){
+            System.out.print("ERROR try again : ");
+            n = sc.nextInt();
+        }
         int space = 0;
 
         if(n>9){
