@@ -19,7 +19,7 @@ public class Lab2_Pro3_64010761 {
         int q = sc.nextInt();
 
 
-        int h = (q + (26*(m+1))/10 + k/4 + j/4 + 5*j ) % 7;
+        int h = (q + (26*(m+1))/10 + k/4 + j/4 + 5*j + k ) % 7;
 
         String day = null;
 
