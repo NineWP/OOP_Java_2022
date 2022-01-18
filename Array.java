@@ -1,7 +1,7 @@
 class Array {
     public static void main(String[] args) {
         // declare array variable
-        int[] number = new int[10];
+        int [] number = new int[10];
         number[0] = 10;
         number[1] = 20;
         number[2] = 30;
