@@ -5,6 +5,10 @@ public class Pro1_64010761 {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter today's day : ");
         int num = sc.nextInt();
+        while(num < 0 || num > 6){
+            System.out.print("Error try again : ");
+            num = sc.nextInt();
+        }
         System.out.print("Enter the number of day elapsed since today : ");
         int future = sc.nextInt();
 

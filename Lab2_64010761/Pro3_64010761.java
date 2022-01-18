@@ -25,7 +25,7 @@ public class Pro3_64010761 {
         System.out.print("Enter the day of the month: 1-31: ");
         int q = sc.nextInt();
 
-        while(q < 1 || q > 31 || (q > 30 && (m == 1 || m == 3 || m == 5 || m == 7 || m == 8 || m == 10 || m == 12) ) || (q > 29 && m == 2)){
+        while(q < 1 || q > 31 || (q > 30 && (m == 4 || m == 6 || m == 9 || m == 11)) || (q > 29 && m == 2)){
             System.out.print("ERROR try again : ");
             q = sc.nextInt();
         }

@@ -9,7 +9,7 @@ public class Pro2_64010761 {
             System.out.print("Error try again : ");
             num = sc.nextInt();
         }
-        int random = (int)Math.random()*3;
+        int random = (int)(Math.random()*3);
         String result;
 
         String [] hand = {"scissor", "rock", "paper"};
