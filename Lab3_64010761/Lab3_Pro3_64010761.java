@@ -65,12 +65,20 @@ public class Lab3_Pro3_64010761 {
         }
 
         // check superdiagonal
-        int defult = matrix[0][1];
+        int defult;
         for(int i = 0; i < n; i++){
+            if(n == 1){
+                System.out.println("No same number on the superdiagonal");
+                break;
+            }
+            else{
+                defult = matrix[0][1];
+            }
             for(int j = i+1; j<n; j++){
                 if(defult != matrix[i][j]){
                     System.out.println("No same number on the superdiagonal");
                     i = n;
+                    j = n;
                 }
                 else if(j == n-1 && i == n-2){
                     System.out.println("All " + defult + "s on the superdiagonal");
@@ -92,12 +100,19 @@ public class Lab3_Pro3_64010761 {
         }
         
         // check subdiagonal
-        defult = matrix[1][0];
         for(int i = 0; i<n; i++){
+            if(n == 1){
+                System.out.println("No same number on the subdiagonal");
+                break;
+            }
+            else{
+                defult = matrix[0][1];
+            }
             for(int j = i+1; j<n; j++){
                 if(defult != matrix[j][i]){
                     System.out.println("No same number on the subdiagonal");
                     i = n;
+                    j = n;
                 }
                 else if(j == n-1 && i == n-2){
                     System.out.println("All " + defult + "s on the subdiagonal");
