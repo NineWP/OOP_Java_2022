@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Lab3_Pro2_64010761 {
@@ -25,7 +26,7 @@ public class Lab3_Pro2_64010761 {
         }
         
         int [] result = merge(intList1, intList2);
-        result = sortArray(result);
+        Arrays.sort(result);
 
         System.out.print("The merged list is");
         for(int i = 0 ; i < result.length ; i++){
@@ -42,19 +43,5 @@ public class Lab3_Pro2_64010761 {
         System.arraycopy(list2, 0, result, length1, length2);
         return result;
 
-    }
-
-    public static int[] sortArray(int [] result){
-        int temp;
-        for (int i = 0; i <result.length; i++) {     
-            for (int j = i+1; j <result.length; j++) {     
-                if(result[i] >result[j]) {      //swap elements if not in order
-                   temp = result[i];    
-                   result[i] = result[j];    
-                   result[j] = temp;    
-                 }     
-              }     
-        }    
-            return result;
     }
 }

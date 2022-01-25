@@ -45,7 +45,7 @@ public class Lab3_Pro3_64010761 {
                     break;
                 }
                 else if(j == n-1){
-                    System.out.println("All " + defult + "s on row " + (i+1));
+                    System.out.println("All " + defult + "s on row " + i);
                 }   
             }
             if(count == n){
@@ -68,7 +68,7 @@ public class Lab3_Pro3_64010761 {
                     break;
                 }
                 else if(j == n-1){
-                    System.out.println("All " + defult + "s on colum " + (i+1));
+                    System.out.println("All " + defult + "s on colum " + i);
                 }   
             }
             if(count == n){
