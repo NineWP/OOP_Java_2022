@@ -5,8 +5,11 @@ public class Lab3_Pro3_64010761 {
     public static void main(String[] args) {
         System.out.print("Enter the size for the matrix : ");
         int n = sc.nextInt();
+        while(n<1){
+            System.out.print("Error try a gain : ");
+            n = sc.nextInt();
+        }
         int matrix[][] = new int[n][n];
-        int count = 0;
 
         // generate matrix
         for(int i = 0 ; i<n ; i++){
@@ -21,8 +24,16 @@ public class Lab3_Pro3_64010761 {
             }
             System.out.print("\n");
         }
+        checkRow(matrix, n);
+        checkColum(matrix, n);
+        checkSuperdiagonal(matrix, n);
+        checkDiagonal(matrix, n);
+        checkSubdiagonal(matrix, n);
+        
+    }
 
-        // check row
+    static void checkRow(int [][] matrix, int n){
+        int count = 0;
         for(int i = 0 ; i<n ; i++){
             int defult = matrix[i][0];
             //System.out.println("defult - " + defult);
@@ -42,8 +53,10 @@ public class Lab3_Pro3_64010761 {
                 count = 0;
             }
         }
-        count = 0;
-        // check colum
+    }
+
+    static void checkColum(int [][] matrix, int n){
+        int count = 0;
         for(int i = 0 ; i<n ; i++){
             int defult = matrix[0][i];
             //System.out.println("defult - " + defult);
@@ -63,8 +76,9 @@ public class Lab3_Pro3_64010761 {
                 count = 0;
             }
         }
+    }
 
-        // check superdiagonal
+    static void checkSuperdiagonal(int [][] matrix, int n){
         int defult;
         for(int i = 0; i < n; i++){
             if(n == 1){
@@ -85,9 +99,10 @@ public class Lab3_Pro3_64010761 {
                 }
             }
         }
+    }
 
-        // check diagonal
-        defult = matrix[0][0];
+    static void checkDiagonal(int [][] matrix, int n){
+        int defult = matrix[0][0];
         for(int i = 0; i<n; i++){
             int j = i;
             if(defult != matrix[i][j]){
@@ -98,15 +113,17 @@ public class Lab3_Pro3_64010761 {
                 System.out.println("All " + defult +"s on the diagonal");
             }
         }
-        
-        // check subdiagonal
+    }
+
+    static void checkSubdiagonal(int [][] matrix, int n){
+        int defult;
         for(int i = 0; i<n; i++){
             if(n == 1){
                 System.out.println("No same number on the subdiagonal");
                 break;
             }
             else{
-                defult = matrix[0][1];
+                defult = matrix[1][0];
             }
             for(int j = i+1; j<n; j++){
                 if(defult != matrix[j][i]){
