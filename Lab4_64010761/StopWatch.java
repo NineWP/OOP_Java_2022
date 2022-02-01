@@ -3,10 +3,6 @@ public class StopWatch {
     private double startTime;
     private double endTime;
 
-    StopWatch(){
-        this.startTime = System.currentTimeMillis();
-    }
-
     public void start(){
         this.startTime = System.currentTimeMillis();
     }
