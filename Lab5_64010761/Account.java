@@ -1,16 +1,23 @@
 import java.util.Date;
 
 public class Account {
-    private int id = 0;
-    private double balance = 0.0;
-    private double annualInterestRate = 0;
+    private int id;
+    private double balance;
+    private double annualInterestRate;
     private Date dateCreate;
 
-    Account(int id , double balance, double annual){
+    Account(){
+        this.id = 0;
+        this.balance = 0;
+        this.annualInterestRate = 0;
+        this.dateCreate = new Date();
+    }
+
+    public Account(int id , double balance, double annual){
         this.id = id;
         this.balance = balance;
         this.annualInterestRate = annual / 100;
-        dateCreate = new Date();    
+        this.dateCreate = new Date();    
     }
 
     public int getId(){
@@ -34,7 +41,7 @@ public class Account {
     }
 
     public double getMonthlyInterest(){
-        return balance * getAnnualInterestRate();
+        return balance * getMonthlyInterestRate();
     }
 
     public void withdraw(double money){

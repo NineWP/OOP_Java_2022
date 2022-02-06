@@ -1,18 +1,36 @@
+import java.lang.Math;
 public class RegularPolygon {
-    private int n = 3; 
-    private double side = 1.0;
-    private double x = 0;
-    private double y = 0;
+    private int n; 
+    private double side;
+    private double x;
+    private double y;
 
-    RegularPolygon(){
-
+    public RegularPolygon(){
+        this.n = 3;
+        this.side = 1.0;
+        this.x = 0;
+        this.y = 0;
     }
 
-    public static double getPerimeter(){
-        return 0;
+    public RegularPolygon(int n, double side){
+        this.n = n;
+        this.side = side;
+        this.x = 0;
+        this.y = 0;
+    }
+
+    public RegularPolygon(int n, double side, double x, double y){
+        this.n = n;
+        this.side = side;
+        this.x = x;
+        this.y = y;
+    }
+
+    public double getPerimeter(){
+        return side * n;
     } 
 
-    public static double getArea(){
-        return 0;
+    public double getArea(){
+        return (n*side*side)/(4*(Math.tan(Math.PI/n)));
     }
 }
