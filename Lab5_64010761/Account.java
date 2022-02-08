@@ -13,11 +13,22 @@ public class Account {
         this.dateCreate = new Date();
     }
 
-    public Account(int id , double balance, double annual){
+    public Account(int id , double balance){
         this.id = id;
         this.balance = balance;
-        this.annualInterestRate = annual / 100;
         this.dateCreate = new Date();    
+    }
+
+    public void setId(int id){
+        this.id = id;
+    }
+
+    public void setBalance(double balance){
+        this.balance = balance;
+    }
+
+    public void setAnnual(double annual){
+        this.annualInterestRate = annual / 100;
     }
 
     public int getId(){
