@@ -15,7 +15,7 @@ public class BMI {
 
     public double getBMI(){
         double w = this.weight * 0.45359237;
-        double h = this.inches * 0.0254;
+        double h = (this.inches + this.feet * 12) * 0.0254;
         return w / (h*h);
     }
 
