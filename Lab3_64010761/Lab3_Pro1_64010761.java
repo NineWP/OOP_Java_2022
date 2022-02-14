@@ -1,8 +1,8 @@
 public class Lab3_Pro1_64010761 {
     public static void main(String[] args) {
         int count = 0;
-        for(int i = 2 ; count < 100 ; i++){
-            if(checkPrime(i) && checkPal(i)){
+        for(int i = 2 ; count < 500 ; i++){
+            if(checkPrime(i)){
                 System.out.print(i + " ");
                 count++;
                 if(count % 10 == 0){
