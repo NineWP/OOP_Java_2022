@@ -11,16 +11,18 @@ public class CheckingAccount extends Account {
         return overdraftLimit;
     }
 
-    public double withdraw(double money){
+    public String withdraw(double money){
         balance -= money;
         if(balance < 0){
             if(overdraftLimit + balance < 0){
-                System.out.println("Overdraft has reach the limit");
+                System.out.println("Withdraw : " + money);
+                System.out.print("Overdraft has reach the limit ; ");
+                return "Error";
             }
             else{
                 overdraftLimit += balance;
             }
         }
-        return money;
+        return Double.toString(money);
     }
 }

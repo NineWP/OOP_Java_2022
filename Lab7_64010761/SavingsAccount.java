@@ -4,13 +4,15 @@ public class SavingsAccount extends Account {
         this.balance = balance;
     }
     
-    public double withdraw(double money){
+    public String withdraw(double money){
         if(money > balance){
-            System.out.println("Error Balance is not enough for withdraw");
+            System.out.println("Withdraw : " + money);
+            System.out.print("Error Balance is not enough for withdraw ; ");
+            return "Error";
         }
         else{
             balance -= money;
         }
-        return money;
+        return Double.toString(money);
     }
 }

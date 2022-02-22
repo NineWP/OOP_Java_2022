@@ -55,13 +55,14 @@ public class Account {
         return balance * getMonthlyInterestRate();
     }
 
-    public double withdraw(double money){
+    public String withdraw(double money){
         this.balance -= money;
-        return money;
+        return Double.toString(money);
     }
 
-    public void deposit(double money){
+    public String deposit(double money){
         this.balance += money;
+        return Double.toString(money);
     }
 
 }
