@@ -25,7 +25,7 @@ public abstract class GeometricObject {
         this.color = color;
     }
 
-    public boolean isFilled(){
+    public boolean getFilled(){
         return filled;
     }
 
