@@ -16,15 +16,15 @@ public class Tax {
 
     }
 
-    Tax(int fillingStatus, int [][] brackets, double [] rates, double taxableIncome){
-        this.filingStatus = fillingStatus;
+    Tax(int filingStatus, int [][] brackets, double [] rates, double taxableIncome){
+        this.filingStatus = filingStatus;
         this.brackets = brackets;
         this.rate = rates;
         this.taxable = taxableIncome;
     }
 
-    public void setFillingStatus(int fillingStatus){
-		this.filingStatus = fillingStatus;
+    public void setFilingStatus(int filingStatus){
+		this.filingStatus = filingStatus;
 	}
 
 	public void setBrackets(int [][] brackets){
@@ -39,19 +39,19 @@ public class Tax {
 		this.taxable = taxable;
 	}
 
-    int getFillingStatus(){
+    public int getFilingStatus(){
 		return filingStatus;
 	}
 
-	int [][] getBrackets(){
+	public int [][] getBrackets(){
 		return brackets;
 	}
 
-	double [] getRates(){
+	public double [] getRates(){
 		return rate;
 	}
 
-	double getTaxableIncome(){
+	public double getTaxableIncome(){
 		return taxable;
 	}
 

@@ -20,24 +20,42 @@ public class Pro6_64010761 {
         double amount ;
 
         //main loop
-        while(choice != 4){
-            choice = getInput();
-            switch(choice){
-                case 1 :
-                    System.out.println("The balance is : " + account[id].getBalance());
-                    break;
-                case 2 :
-                    System.out.print("Enter an amount to withdraw : ");
-                    amount = sc.nextDouble();
-                    account[id].withdraw(amount);
-                    break;
-                case 3 :
-                    System.out.print("Enter an amount to deposit : ");
-                    amount = sc.nextDouble();
-                    account[id].deposit(amount);
-                    break;
+        while(true){
+            while(choice != 4){
+                choice = getInput();
+                switch(choice){
+                    case 1 :
+                        System.out.println("The balance is : " + account[id].getBalance());
+                        break;
+                    case 2 :
+                        System.out.print("Enter an amount to withdraw : ");
+                        amount = sc.nextDouble();
+                        while(amount < 0 || amount > account[id].getBalance()){
+                            System.out.print("Error try again : ");
+                            amount = sc.nextDouble();
+                        }
+                        account[id].withdraw(amount);
+                        break;
+                    case 3 :
+                        System.out.print("Enter an amount to deposit : ");
+                        amount = sc.nextDouble();
+                        while(amount < 0){
+                            System.out.print("Error try again : ");
+                            amount = sc.nextDouble();
+                        }
+                        account[id].deposit(amount);
+                        break;
+                }
             }
+        System.out.print("Enter an id : ");
+        id = sc.nextInt();
+            while(id > 9 || id < 0){
+                System.out.print("Error try again : ");
+                id = sc.nextInt();
+            }
+        choice = 0;
         }
+        
     }
 
     public static int getInput(){
