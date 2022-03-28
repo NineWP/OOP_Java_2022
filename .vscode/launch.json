@@ -1,0 +1,122 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "type": "java",
+            "name": "Launch Lab9_2_Pro1_64010761",
+            "request": "launch",
+            "mainClass": "Lab9_2_Pro1_64010761",
+            "projectName": "OOP_Java_2022_b9aff691",
+            "vmArgs": "--module-path \"C:/javafx/lib\" --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch Lab7_Pro1_64010761",
+            "request": "launch",
+            "mainClass": "Lab7_Pro1_64010761",
+            "projectName": "OOP_Java_2022_b9aff691"
+        },
+        {
+            "type": "java",
+            "name": "Launch Lab7_Pro2_64010761",
+            "request": "launch",
+            "mainClass": "Lab7_Pro2_64010761",
+            "projectName": "OOP_Java_2022_b9aff691"
+        },
+        {
+            "type": "java",
+            "name": "Launch Lab7_Pro3_64010761",
+            "request": "launch",
+            "mainClass": "Lab7_Pro3_64010761",
+            "projectName": "OOP_Java_2022_b9aff691"
+        },
+        {
+            "type": "java",
+            "name": "Launch Lab8_Pro1_64010761",
+            "request": "launch",
+            "mainClass": "Lab8_Pro1_64010761",
+            "projectName": "OOP_Java_2022_b9aff691"
+        },
+        {
+            "type": "java",
+            "name": "Launch Lab8_Pro2_64010761",
+            "request": "launch",
+            "mainClass": "Lab8_Pro2_64010761",
+            "projectName": "OOP_Java_2022_b9aff691"
+        },
+        {
+            "type": "java",
+            "name": "Launch Lab8_Pro3_64010761",
+            "request": "launch",
+            "mainClass": "Lab8_Pro3_64010761",
+            "projectName": "OOP_Java_2022_b9aff691"
+        },
+        {
+            "type": "java",
+            "name": "Launch Lab8_Pro4_64010761",
+            "request": "launch",
+            "mainClass": "Lab8_Pro4_64010761",
+            "projectName": "OOP_Java_2022_b9aff691"
+        },
+        {
+            "type": "java",
+            "name": "Launch Lab9_Pro1_64010761",
+            "request": "launch",
+            "mainClass": "Lab9_Pro1_64010761",
+            "projectName": "OOP_Java_2022_b9aff691",
+            "vmArgs": "--module-path \"C:/javafx/lib\" --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "Launch Pro1_64010761",
+            "request": "launch",
+            "mainClass": "Pro1_64010761",
+            "projectName": "OOP_Java_2022_b9aff691"
+        },
+        {
+            "type": "java",
+            "name": "Launch Pro2_64010761",
+            "request": "launch",
+            "mainClass": "Pro2_64010761",
+            "projectName": "OOP_Java_2022_b9aff691"
+        },
+        {
+            "type": "java",
+            "name": "Launch Pro3_64010761",
+            "request": "launch",
+            "mainClass": "Pro3_64010761",
+            "projectName": "OOP_Java_2022_b9aff691"
+        },
+        {
+            "type": "java",
+            "name": "Launch Pro4_64010761",
+            "request": "launch",
+            "mainClass": "Pro4_64010761",
+            "projectName": "OOP_Java_2022_b9aff691"
+        },
+        {
+            "type": "java",
+            "name": "Launch Pro5_64010761",
+            "request": "launch",
+            "mainClass": "Pro5_64010761",
+            "projectName": "OOP_Java_2022_b9aff691"
+        },
+        {
+            "type": "java",
+            "name": "Launch Pro6_64010761",
+            "request": "launch",
+            "mainClass": "Pro6_64010761",
+            "projectName": "OOP_Java_2022_b9aff691"
+        }
+    ]
+}
