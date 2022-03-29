@@ -11,11 +11,12 @@ import javafx.animation.KeyFrame;
 import javafx.util.Duration;
 
 public  class FanPane extends StackPane {
-	private double startAngle = 15;
-	private Timeline fan;
-	private Pane blades = getBlades();
-	private ObservableList<Node> list = blades.getChildren();
+	private double startAngle = 15; // set angle of arcs
+	private Timeline fan; // timeline animetion
+	private Pane blades = getBlades();	// Create four arcs
+	private ObservableList<Node> list = blades.getChildren(); // list of arcs
 
+	// fanPane constructor 
 	public FanPane() {
 		getChildren().addAll(getCircle(), blades);
 		fan = new Timeline(
@@ -24,6 +25,7 @@ public  class FanPane extends StackPane {
 		fan.play();
 	}
 
+	// Animate fan blades
 	protected void spinFan() {
 		for (int i = 0; i < list.size(); i++) {
 			Arc a = (Arc)list.get(i);
@@ -39,10 +41,12 @@ public  class FanPane extends StackPane {
 		fan.play();
 	}
 
+	// reverse the direction of spin
 	protected void reverse() {
 		startAngle *= -1;
 	}
 
+	// add 4 arcs to a pane and place them in a stack pane
 	private Pane getBlades() {
 		Pane pane = new Pane();
 		double angle = 0;
@@ -56,6 +60,7 @@ public  class FanPane extends StackPane {
 		return pane;
 	}
 
+	// return circle
 	private Circle getCircle() {
 		Circle c = new Circle();
 		c.setRadius(100);

@@ -13,13 +13,14 @@ import javafx.beans.property.DoubleProperty;
 
 public  class FanPane2 extends Pane {
 	private Circle circle = new Circle();
-	private double startAngle = 15;
-	private Timeline fan;
-	private Pane paneForBlades = new Pane();
+	private double startAngle = 15; // start angle of arcs
+	private Timeline fan; // timeline animetion
+	private Pane paneForBlades = new Pane();// create 4 arcs
 	private Arc arc;
 
+	// fanpan constructor
 	public FanPane2() {
-		setPadding(new Insets(10, 10, 10, 10));
+		setPadding(new Insets(10, 10, 10, 10)); 
 		circle.setStroke(Color.BLACK);
 		circle.setFill(Color.WHITE);
 		circle.centerXProperty().bind(widthProperty().divide(2));
@@ -27,12 +28,12 @@ public  class FanPane2 extends Pane {
 		circle.radiusProperty().bind((heightProperty().divide(2)).multiply(.90));
 		getBlades();
 		getChildren().addAll(circle, paneForBlades);
-		fan = new Timeline(
-			new KeyFrame(Duration.millis(50), e -> spinFan()));
+		fan = new Timeline(new KeyFrame(Duration.millis(50), e -> spinFan()));
 		fan.setCycleCount(Timeline.INDEFINITE);
 		fan.play();
 	}
 
+	// Animate fan blades
 	protected void spinFan() {
 		ObservableList<Node> list = paneForBlades.getChildren();
 		for (int i = 0; i < list.size(); i++) {
@@ -57,6 +58,7 @@ public  class FanPane2 extends Pane {
 		return fan.rateProperty();
 	} 
 
+	// add 4 arcs to a pane and place them in a stack pane
 	private void getBlades() {
 		double angle = 0;
 		for (int i = 0; i < 4; i++) {

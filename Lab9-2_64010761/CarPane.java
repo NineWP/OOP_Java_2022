@@ -7,6 +7,7 @@ import javafx.scene.shape.Circle;
 import javafx.util.Duration;
 
 public class CarPane extends Pane {
+	// create required variable
 	private double x = 0;
 	private double y = 100;
 	private double radius = 5;
@@ -16,7 +17,7 @@ public class CarPane extends Pane {
 	private Circle circle2;
 	private Timeline animation;
 
-	CarPane() {
+	CarPane() { // carpane constructor
 		drawCar();
 		animation = new Timeline(
 			new KeyFrame(Duration.millis(50), e -> moveCar()));
@@ -24,6 +25,7 @@ public class CarPane extends Pane {
 		animation.play();
 	}
 
+	// create carpane and set position of carpane in the pane
 	private void drawCar() {
 		getChildren().clear();
 		rectangle = new Rectangle(x, y - 20, 50, 10);
@@ -50,6 +52,7 @@ public class CarPane extends Pane {
 		animation.setRate(animation.getRate() > 0 ? animation.getRate() - 1 : 0);
 	}
 
+	// moveCar will redraw carpane with new position like "update()" in sfml
 	protected void moveCar() {
 		if (x <= getWidth()) {
 			x += 1;	

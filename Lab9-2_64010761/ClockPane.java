@@ -6,6 +6,7 @@ import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
 import javafx.scene.text.Text;
 public class ClockPane extends Pane{
+	// Create required variable
     private int hour;
 	private int minute;
 	private int second;
@@ -13,21 +14,24 @@ public class ClockPane extends Pane{
 	private boolean minuteHandVisible;
 	private boolean secondHandVisible;
 
+	// clock pane width and height
 	private double w = 250, h = 250;
 
-	public ClockPane() {
+	public ClockPane() { //set a clock with the current time 
 		setCurrentTime();
 	}
 
-	public ClockPane(int hour, int minute, int second) {
+	public ClockPane(int hour, int minute, int second) { // construct with hour minute and second
 		this.hour = hour;
 		this.minute = minute;
 		this.second = second;
-		hourHandVisible = minuteHandVisible = 
+		hourHandVisible = true;
+		minuteHandVisible = true;
 		secondHandVisible = true;
 		paintClock();
 	}
 
+	// method set and get
 	public int getHour() {
 		return hour;
 	}
@@ -100,7 +104,8 @@ public class ClockPane extends Pane{
 		paintClock();
 	}
 
-	public void setCurrentTime() {
+	// set the current time for the clock
+	public void setCurrentTime() { 
 		Calendar calendar = new GregorianCalendar();
 		this.hour = calendar.get(Calendar.HOUR_OF_DAY);
 		this.minute = calendar.get(Calendar.MINUTE);
@@ -108,6 +113,7 @@ public class ClockPane extends Pane{
 		paintClock();
 	}
 	
+	// paint/draw the clock
 	protected void paintClock() {
 		double clockRadius = Math.min(w, h) * 0.8 * 0.5;
 		double centerX = w / 2;
