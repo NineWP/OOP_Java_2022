@@ -43,7 +43,7 @@ public class Lab9_2_Pro6_64010761 extends Application {
 		});
 
 		Scene scene = new Scene(pane, 200, 200);
-		primaryStage.setTitle("Exercise_16_18");
+		primaryStage.setTitle("Program 6");
 		primaryStage.setScene(scene);
 		primaryStage.show();
 	}

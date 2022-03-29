@@ -20,7 +20,7 @@ public class Lab9_2_Pro3_64010761 extends Application{
 		BorderPane.setAlignment(time, Pos.TOP_CENTER);
 
 		Scene scene = new Scene(pane, 250, 250); 
-		primaryStage.setTitle("Exercise_14_28");
+		primaryStage.setTitle("Program 3");
 		primaryStage.setScene(scene);
 		primaryStage.show();
 	}

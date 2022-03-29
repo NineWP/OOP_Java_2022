@@ -26,7 +26,7 @@ public class Lab9_2_Pro2_64010761 extends Application{
 		}
 
         Scene scene = new Scene(grid);
-        primaryStage.setTitle("Exercise 14.7");
+        primaryStage.setTitle("Program 2");
 		primaryStage.setScene(scene);
 		primaryStage.show();
     }
