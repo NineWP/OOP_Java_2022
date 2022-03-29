@@ -15,7 +15,7 @@ public class Lab9_2_Pro1_64010761 extends Application {
         grid.add(image,0,0);
 
         Scene scene = new Scene(grid,500,300);
-        primaryStage.setTitle("Exercise_14_01");
+        primaryStage.setTitle("Exercise 14.1");
 		    primaryStage.setScene(scene);
 		    primaryStage.show();
     }

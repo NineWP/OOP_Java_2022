@@ -7,6 +7,46 @@
 
         {
             "type": "java",
+            "name": "Launch Lab9_2_Pro6_64010761",
+            "request": "launch",
+            "mainClass": "Lab9_2_Pro6_64010761",
+            "projectName": "OOP_Java_2022_b9aff691",
+            "vmArgs": "--module-path \"C:/javafx/lib\" --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "Launch Lab9_2_Pro5_64010761",
+            "request": "launch",
+            "mainClass": "Lab9_2_Pro5_64010761",
+            "projectName": "OOP_Java_2022_b9aff691",
+            "vmArgs": "--module-path \"C:/javafx/lib\" --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "Launch Lab9_2_Pro4_64010761",
+            "request": "launch",
+            "mainClass": "Lab9_2_Pro4_64010761",
+            "projectName": "OOP_Java_2022_b9aff691",
+            "vmArgs": "--module-path \"C:/javafx/lib\" --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "Launch Lab9_2_Pro3_64010761",
+            "request": "launch",
+            "mainClass": "Lab9_2_Pro3_64010761",
+            "projectName": "OOP_Java_2022_b9aff691",
+            "vmArgs": "--module-path \"C:/javafx/lib\" --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "Launch Lab9_2_Pro2_64010761",
+            "request": "launch",
+            "mainClass": "Lab9_2_Pro2_64010761",
+            "projectName": "OOP_Java_2022_b9aff691",
+            "vmArgs": "--module-path \"C:/javafx/lib\" --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
             "name": "Launch Lab9_2_Pro1_64010761",
             "request": "launch",
             "mainClass": "Lab9_2_Pro1_64010761",
