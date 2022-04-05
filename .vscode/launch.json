@@ -4,7 +4,34 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-
+        {
+            "type": "java",
+            "name": "Launch Lab10_Pro4_64010761",
+            "request": "launch",
+            "mainClass": "Lab10_Pro4_64010761",
+            "projectName": "OOP_Java_2022_b9aff691"
+        },
+        {
+            "type": "java",
+            "name": "Launch Lab10_Pro3_64010761",
+            "request": "launch",
+            "mainClass": "Lab10_Pro3_64010761",
+            "projectName": "OOP_Java_2022_b9aff691"
+        },
+        {
+            "type": "java",
+            "name": "Launch Lab10_Pro2_64010761",
+            "request": "launch",
+            "mainClass": "Lab10_Pro2_64010761",
+            "projectName": "OOP_Java_2022_b9aff691"
+        },
+        {
+            "type": "java",
+            "name": "Launch Lab10_Pro1_64010761",
+            "request": "launch",
+            "mainClass": "Lab10_Pro1_64010761",
+            "projectName": "OOP_Java_2022_b9aff691"
+        },
         {
             "type": "java",
             "name": "Launch Lab9_2_Pro6_64010761",
