@@ -1,3 +1,5 @@
+import java.io.*;
+
 import javafx.application.Application;
 import javafx.geometry.HPos;
 import javafx.geometry.Pos;
@@ -53,9 +55,27 @@ public class Lab11_Pro1_64010761 extends Application{
         tfTotalPayment.setAlignment(Pos.BOTTOM_RIGHT);
         tfMonthlyPayment.setEditable(false);
         tfTotalPayment.setEditable(false);
-        gridPane.setHalignment(hbox2, HPos.RIGHT);
+        GridPane.setHalignment(hbox2, HPos.RIGHT);
 
         btCalculate.setOnAction(e -> calculateLoanPayment());
+        btSave.setOnAction(e -> {
+            try {
+                saveData();
+            } catch (IOException e1) {
+                e1.printStackTrace();
+            }
+        });
+
+        btLoad.setOnAction(e -> {
+            try {
+                loadData();
+            } catch (ClassNotFoundException | IOException e1) {
+                // TODO Auto-generated catch block
+                e1.printStackTrace();
+            }
+        });
+
+        btClear.setOnAction(e -> clear());
 
         Scene scene = new Scene(gridPane, 400, 210);
         stage.setTitle("LoanCalculator");
@@ -72,6 +92,53 @@ public class Lab11_Pro1_64010761 extends Application{
         
         tfMonthlyPayment.setText(String.format("$%.2f", loan.getMonthlyPayment()));
         tfTotalPayment.setText(String.format("$%.2f", loan.getTotalPayment()));
+    }
+
+    private void saveData() throws IOException{
+        double interest = Double.parseDouble(tfAnnualInterestRate.getText());
+        int year = Integer.parseInt(tfNumberOfYears.getText());
+        double loanAmount = Double.parseDouble(tfLoanAmount.getText());
+
+        Loan loan = new Loan(interest, year, loanAmount);
+        try ( // Create an output stream for the file Exercise17_06.dat
+			ObjectOutputStream output = new ObjectOutputStream(new 
+				BufferedOutputStream(new FileOutputStream("Lab11_64010761/loan.dat")));
+		) {
+			// Write five Loan objects to the file
+			output.writeObject(loan);
+		}
+    }
+
+    private void loadData() throws IOException, ClassNotFoundException{
+        try ( // Create an input stream for file Exercise17.07.dat
+			ObjectInputStream input = new ObjectInputStream(new 
+				BufferedInputStream(new FileInputStream("Lab11_64010761/loan.dat")))
+		) { // Read Loan objects from file and display the total loan amount
+			while (true) {
+				Loan loan = (Loan)input.readObject();
+				System.out.println(loan);
+                System.out.printf("Total monthly payment : $%.2f\n",
+                    loan.getMonthlyPayment());
+				System.out.printf("Total loan amount: $%.2f\n", 
+					loan.getTotalPayment());
+				System.out.println();
+                tfAnnualInterestRate.setText(String.valueOf(loan.getAnnualInterestRate()));
+                tfLoanAmount.setText(String.valueOf(loan.getLoanAmount()));
+                tfNumberOfYears.setText(String.valueOf(loan.getNumberOfYears()));
+			}
+            
+		}
+		catch (EOFException ex) {
+			// Use EOFExecption to end the loop
+		}
+    }
+
+    private void clear(){
+        tfAnnualInterestRate.setText("");
+        tfNumberOfYears.setText("");
+        tfLoanAmount.setText("");
+        tfMonthlyPayment.setText("");
+        tfTotalPayment.setText("");
     }
 
    public static void main(String[] args) {
