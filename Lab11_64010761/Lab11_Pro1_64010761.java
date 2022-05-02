@@ -125,6 +125,7 @@ public class Lab11_Pro1_64010761 extends Application{
                 tfAnnualInterestRate.setText(String.valueOf(loan.getAnnualInterestRate()));
                 tfLoanAmount.setText(String.valueOf(loan.getLoanAmount()));
                 tfNumberOfYears.setText(String.valueOf(loan.getNumberOfYears()));
+                calculateLoanPayment();
 			}
             
 		}
