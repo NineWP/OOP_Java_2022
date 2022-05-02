@@ -10,7 +10,7 @@ public class Lab9_2_Pro3_64010761 extends Application{
 		// create clock with random and create label
 		ClockPane clock = new ClockPane((int)(Math.random() * 12), ((int)(Math.random() * 2) == 1 ? 30 : 0), 0);
 		String timeString = clock.getHour() + ":" + clock.getMinute()+ ":" + clock.getSecond();
-		clock.setSecondHandVisible(false); // Hide the secondHand of clock
+		clock.setSecondHandVisible(true); // Hide the secondHand of clock
 		Label time = new Label(timeString);
 
 		// place a clock and label in border pan

@@ -1,4 +1,3 @@
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Lab3_Pro2_64010761 {
@@ -26,7 +25,7 @@ public class Lab3_Pro2_64010761 {
         }
         
         int [] result = merge(intList1, intList2);
-        Arrays.sort(result);
+        bubbleSort(result, result.length);
 
         System.out.print("The merged list is");
         for(int i = 0 ; i < result.length ; i++){
@@ -43,5 +42,17 @@ public class Lab3_Pro2_64010761 {
         System.arraycopy(list2, 0, result, length1, length2);
         return result;
 
+    }
+
+    public static void bubbleSort(int [] sort_arr, int len){
+        for (int i=0;i<len-1;++i){
+            for(int j=0;j<len-i-1; ++j){
+                if(sort_arr[j+1]<sort_arr[j]){
+                    int swap = sort_arr[j];
+                    sort_arr[j] = sort_arr[j+1];
+                    sort_arr[j+1] = swap;
+                }
+            }
+        }
     }
 }

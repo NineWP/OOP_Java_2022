@@ -1,0 +1,25 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\Users\\ASUS\\Desktop\\OOP Project\\lib\\javafx\\lib\\javafx.base.jar",
+        "c:\\Users\\ASUS\\Desktop\\OOP Project\\lib\\javafx\\lib\\javafx.controls.jar",
+        "c:\\Users\\ASUS\\Desktop\\OOP Project\\lib\\javafx\\lib\\javafx.fxml.jar",
+        "c:\\Users\\ASUS\\Desktop\\OOP Project\\lib\\javafx\\lib\\javafx.graphics.jar",
+        "c:\\Users\\ASUS\\Desktop\\OOP Project\\lib\\javafx\\lib\\javafx.media.jar",
+        "c:\\Users\\ASUS\\Desktop\\OOP Project\\lib\\javafx\\lib\\javafx.swing.jar",
+        "c:\\Users\\ASUS\\Desktop\\OOP Project\\lib\\javafx\\lib\\javafx.web.jar",
+        "c:\\Users\\ASUS\\Desktop\\OOP Project\\lib\\javafx\\lib\\javafx-swt.jar",
+        "c:\\javafx\\lib\\javafx.base.jar",
+        "c:\\javafx\\lib\\javafx.controls.jar",
+        "c:\\javafx\\lib\\javafx.fxml.jar",
+        "c:\\javafx\\lib\\javafx.graphics.jar",
+        "c:\\javafx\\lib\\javafx.media.jar",
+        "c:\\javafx\\lib\\javafx.swing.jar",
+        "c:\\javafx\\lib\\javafx.web.jar",
+        "c:\\javafx\\lib\\javafx-swt.jar"
+    ],
+    "java.project.sourcePaths": [
+        "Lab9-2_64010761",
+        "Lab3_64010761"
+    ]
+}
